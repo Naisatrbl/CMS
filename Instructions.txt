@@ -1,0 +1,61 @@
+//
+Christopher Duong
+Cameron Martin
+Luke Higginbotham
+Jared Key
+//
+
+
+Login Test:
+
+Attempt logging in without filling in user and password fields
+-Should receive "incorrect username" message
+Attempt logging in with correct user incorrect password
+-Should receive "incorrect password" message"
+Attempt logging in with correct user and password (user:pbrian pass:password)
+-Should check Login DB and return with a match, bringing user to home page
+
+Homepage Test:
+
+Press Support Button
+-On hit should return joke "Support doesn't care" response 
+(Future implementation will actually lead to support line once it is established)
+
+Press Logout Button
+-On hit should return the user to the login page with their username in field but no password
+-Should hide HomePage
+
+Press Social Tab Button
+-Should hide HomePage and take user to Social Tab
+-Should show page containing "back home" button, a table of employees, and a "check calendar" button
+-home button hides social tab and returns user to home
+-calendar button reveals a small calendar users can use to keep track of upcoming events
+
+Press Map Button
+-Should hide HomePage and take user to Map Tab
+-Should display a map of cemetery plot which currently utilizes google maps api but can be updated with more specific
+aerial drone footage of plot in future
+-contains classic google map functions such as zoom in, zoom out (either with button or scroll wheel), map view, 
+satellite view, or street view
+-Contains "back home" button which will return the user to the home page and hide the map tab
+
+Press Settings Button
+-Should hide HomePage and take user to Settings Tab
+-Should load home button, a toggle dark mode button, and a font size drop down menu
+-home button should return user to home page and hide settings page
+-Toggle Dark Mode button should alter background colors to a darker palette to make it easier on user's eyes
+-Change Font Size alter Label sizes to size specified in drop down
+
+Press Records Button
+-Should hide HomePage and take user to Records Tab
+-User will be shown a frame with a search tab where users can query database for any matches
+-User will be shown a search table with column labels to help distinguish relevant information
+	view entries button
+	-should display database entries to user in search table
+	create new entry button
+	-should open new popup containing text fields where new entry info can be added
+		add entry button
+		-should add entry into database with information passed from text field
+	cancel button 
+	-closes popup and purges information stored in textfields
+-Contains "Home" button which will hide records tab from user and return them to the homepage
